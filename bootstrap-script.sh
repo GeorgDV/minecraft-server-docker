@@ -19,7 +19,7 @@ sudo docker-compose --version
 
 sudo yum install -y git
 
-# insatall/run minecraft 
+# install/run minecraft 
 
 git clone https://github.com/eritikass/minecraft-server-docker.git
 cd minecraft-server-docker
