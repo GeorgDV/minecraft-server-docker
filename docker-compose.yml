@@ -1,0 +1,31 @@
+version: "3"
+# Other docker-compose examples in /examples
+
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    ports:
+      - "25565:25565"
+    volumes:
+      - "./data/minecraft-data:/data"
+    environment:
+      EULA: "TRUE"
+      ENABLE_RCON: "true"
+      RCON_PASSWORD: "testing"
+      RCON_PORT: 28016
+      # enable env variable replacement
+      REPLACE_ENV_VARIABLES: "TRUE"
+      # define an optional prefix for your env variables you want to replace
+      ENV_VARIABLE_PREFIX: "CFG_"
+      # and here are the actual variables
+      CFG_DB_HOST: "http://localhost:3306"
+      CFG_DB_NAME: "minecraft"
+      CFG_DB_PASSWORD: "ug23u3bg39o-ogADSs"
+    restart: always
+  rcon:
+    image: itzg/rcon
+    ports:
+      - "4326:4326"
+      - "4327:4327"
+    volumes:
+      - "./data/rcon:/opt/rcon-web-admin/db"
