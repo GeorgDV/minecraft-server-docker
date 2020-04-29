@@ -20,3 +20,8 @@ docker-compose --version
 ```
 sudo yum install -y git
 ```
+
+## after clone run 
+```
+sudo docker-compose up
+```
