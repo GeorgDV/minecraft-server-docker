@@ -10,4 +10,5 @@ aws ec2 run-instances \
  --security-group-ids=$SECURITY_GROUP_IDS \
  --subnet-id=$SUBNET_ID \
  --user-data=file://bootstrap-script.sh \
- --output=table
+ --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=minecraft-server}]' \
+ --query='Instances[*].{InstanceId:InstanceId,IP:PrivateIpAddress}' --output table
