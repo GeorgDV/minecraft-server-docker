@@ -9,4 +9,5 @@ aws ec2 run-instances \
  --key-name=quarantine-key-pair \
  --security-group-ids=$SECURITY_GROUP_IDS \
  --subnet-id=$SUBNET_ID \
- --user-data=file://bootstrap-script.sh
+ --user-data=file://bootstrap-script.sh \
+ --output=table
