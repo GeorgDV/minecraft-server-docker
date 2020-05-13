@@ -1,0 +1,25 @@
+{
+  "name": "minecraft-server-docker",
+  "version": "1.0.0",
+  "description": "* Git clone this repo\r  * Install packages ( check [install-soft.sh](./install-soft.sh) )\r  * Run server `sudo docker-compose up`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorgDV/-minecraft-server-docker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeorgDV/-minecraft-server-docker/issues"
+  },
+  "homepage": "https://github.com/GeorgDV/-minecraft-server-docker#readme",
+  "dependencies": {
+    "aws-sdk": "^2.675.0",
+    "express": "^4.17.1"
+  }
+}
